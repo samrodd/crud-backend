@@ -17,10 +17,10 @@ const apiRouter = require('./routes/index');
 const syncDatabase = async () => {
   //sync and seed
   try {
-    await db.sync({force: true});
-    console.log('------Synced to db--------')
-    await seedDB();
-    console.log('--------Successfully seeded db--------');
+    await db.sync({force: false});
+   // console.log('------Synced to db--------')
+   // await seedDB();
+   // console.log('--------Successfully seeded db--------');
   } catch (err) {
     console.error('syncDB error:', err);
   }  
